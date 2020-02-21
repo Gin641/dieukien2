@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>do you love me</title>
+</head>
+<body>
+<h1 style=" position: absolute; left: 500px; top: 120px">Do you love me?</h1>
+<input type="button" value="Có" onclick="alert('uk')" style="position: absolute; left: 510px; top: 200px ">
+<input type="button" value="Không
+" id="Nope" onmouseover="showrandom()" style="position: absolute; left: 590px; top: 200px">
+<script>
+    function showrandom() {
+        document.getElementById("Nope").style.top = Math.floor(Math.random() * 200) + "px";
+        document.getElementById("Nope").style.left = Math.floor(Math.random() * 200) + "px";
+    }
+</script>
+</body>
+</html>

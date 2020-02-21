@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sự kiện chuột</title>
+</head>
+<body>
+<form>
+    <img src="EEXVggdVUAA0kYq.png" id="myIMG">
+    <p>Click button below to move the img to right</p>
+    <input type="button" value="click me" onclick="moveRinght()">
+    <script>
+        let IMG = null;
+        IMG = document.getElementById('myIMG');
+        function init() {
+            IMG = document.getElementById('myIMG');
+            IMG.style.position = 'relative' ;
+            IMG.style.left = '0px';
+        }
+        function moveRinght() {
+            IMG.style.left = parseInt(IMG.style.left) + 10 + 'px';
+        }
+        window.onload = init;
+    </script>
+</form>
+</body>
+</html>
