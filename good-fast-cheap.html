@@ -5,11 +5,41 @@
     <title>good-fast-cheap</title>
 </head>
 <body>
-<input type="checkbox" value="good">good <br>
-<input type="checkbox" value="fasl">fasl <br>
-<input type="checkbox" value="cheap">cheap
+<input type="checkbox" id="a" onclick="check(this.id)" >good <br>
+<input type="checkbox" id="b" onclick="check(this.id)">fast <br>
+<input type="checkbox" id="c" onclick="check(this.id)">cheap
 <script>
-
+    function check(id) {
+        let good = document.getElementById("a");
+        ischeckgood = good.checked;
+        let fast = document.getElementById("b");
+        ischeckfast = fast.checked;
+        let cheap = document.getElementById("c");
+        ischeckcheap = cheap.checked;
+        switch (id) {
+            case "a":
+                if (ischeckgood){
+                    if (ischeckcheap && ischeckfast){
+                        fast.checked = false;
+                    }
+                }
+            break;
+            case "b":
+                if (ischeckfast){
+                    if (ischeckcheap && ischeckgood){
+                        cheap.checked = false;
+                    }
+                }
+             break;
+             case "c":
+                 if (ischeckcheap){
+                     if (ischeckgood && ischeckfast){
+                         good.checked = false;
+                     }
+                 }
+             break;
+        }
+    }
 </script>
 </body>
 </html>
